@@ -15,6 +15,16 @@
 
 记录只写在浏览器 localStorage 里，没有账号，没有埋点，作文不上传。
 
+## 日常更新（改完怎么发上去）
+
+1. 改这个文件夹里的文件：页面是 `*.html`，样式 `assets/style.css`，资料 `data/`
+2. 双击 **更新并发布.bat**（等价于 `powershell -ExecutionPolicy Bypass -File tools/push.ps1`）
+3. 等一分钟，刷新 <https://1292410334-hue.github.io/cet-desk/>
+
+**在线地址**：<https://1292410334-hue.github.io/cet-desk/>
+**仓库**：<https://github.com/1292410334-hue/cet-desk>
+**手机临时预览**（同一 Wi-Fi）：双击 `手机预览.bat`
+
 ## 部署（发给别人、手机上打开）
 
 整套站是纯静态文件，没有后端、没有数据库、不需要装任何东西。三种发法：
