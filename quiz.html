@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>考点练习 · 四六级自习室</title>
+<meta name="description" content="四六级考点练习：词义、音标、短语搭配、拼写四类题，从真实词条出题，当场判分。">
+<meta name="theme-color" content="#F3EEE2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F3EEE2'/%3E%3Crect x='5.5' y='5.5' width='21' height='21' fill='none' stroke='%23A33A2C' stroke-width='2'/%3E%3Cpath d='M11 16h10M16 11v10' stroke='%231E1B16' stroke-width='1.5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="top wrap">
+  <div class="brand">
+    <b>四六级自习室</b>
+    <span>DRILLS / 考点练习</span>
+  </div>
+  <nav class="nav">
+    <a href="index.html"><i>01</i>封面</a>
+    <a href="words.html"><i>02</i>单词</a>
+    <a href="papers.html"><i>03</i>真题</a>
+    <a href="exam.html"><i>04</i>模考</a>
+    <a href="listen.html"><i>05</i>听力</a>
+    <a href="quiz.html"><i>06</i>练习</a>
+    <a href="write.html"><i>07</i>作文</a>
+  </nav>
+</header>
+
+<main class="wrap" id="main">
+
+  <section class="page-head has-img" style="background-image:linear-gradient(90deg,rgba(11,12,16,.9),rgba(11,12,16,.55) 60%,rgba(11,12,16,.3)),url(assets/banner-quiz.jpg);background-size:cover;background-position:center 42%" data-enter>
+    <p class="caption">DRILLS · 20 题一轮</p>
+    <h1 class="h4">考点练习 · 四种题型，当场判</h1>
+    <p class="lead-s">词义、音标、短语搭配、拼写，题干从真实词条现出。答错的词会写进单词本的错词本。</p>
+  </section>
+
+  <div class="toolbar">
+    <div class="seg" id="js-level">
+      <button data-level="cet4">四级</button>
+      <button data-level="cet6">六级</button>
+    </div>
+    <div class="seg" id="js-num">
+      <button data-n="10">10 题</button>
+      <button data-n="20" class="on">20 题</button>
+    </div>
+    <button class="btn" id="js-new">换一轮</button>
+    <span class="spacer"></span>
+    <span class="meta-line" id="js-status">还没开始</span>
+  </div>
+
+  <div class="qwrap">
+    <div id="js-qs"></div>
+    <aside class="sheet">
+      <h4>答题卡</h4>
+      <div class="cells" id="js-cells"></div>
+      <div class="score" id="js-score">答完自动判分。</div>
+      <p class="note" style="font-size:12px;margin-top:12px">答错的词会写进单词本的错词本。</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>题干与选项由 <a href="https://github.com/KyleBing/english-vocabulary" target="_blank" rel="noopener">KyleBing/english-vocabulary</a> 的真实词条生成，不联网。</p>
+    <p class="mono">D / 05</p>
+  </footer>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="assets/quiz.js"></script>
+</body>
+</html>

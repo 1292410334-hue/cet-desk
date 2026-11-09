@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>单词本 · 四六级自习室</title>
+<meta name="description" content="四六级单词本：四级 4190 词、六级 3991 词，含 1554 / 2298 个核心词，音标、例句、短语、自测与错词本。">
+<meta name="theme-color" content="#F3EEE2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F3EEE2'/%3E%3Crect x='5.5' y='5.5' width='21' height='21' fill='none' stroke='%23A33A2C' stroke-width='2'/%3E%3Cpath d='M11 16h10M16 11v10' stroke='%231E1B16' stroke-width='1.5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="top wrap">
+  <div class="brand">
+    <b>四六级自习室</b>
+    <span>WORDS / 单词本</span>
+  </div>
+  <nav class="nav">
+    <a href="index.html"><i>01</i>封面</a>
+    <a href="words.html"><i>02</i>单词</a>
+    <a href="papers.html"><i>03</i>真题</a>
+    <a href="exam.html"><i>04</i>模考</a>
+    <a href="listen.html"><i>05</i>听力</a>
+    <a href="quiz.html"><i>06</i>练习</a>
+    <a href="write.html"><i>07</i>作文</a>
+  </nav>
+  <div class="seal">耐烦</div>
+</header>
+
+<main class="wrap" id="main">
+
+  <section class="page-head has-img" style="background-image:linear-gradient(90deg,rgba(11,12,16,.9),rgba(11,12,16,.55) 60%,rgba(11,12,16,.3)),url(assets/banner-words.jpg);background-size:cover;background-position:center 42%" data-enter>
+    <p class="caption">WORDS · 核心 1554 / 2298</p>
+    <h1 class="h4">词汇 · 四级 4190，六级 3991</h1>
+    <p class="lead-s">核心词是删掉初中、高中词表之后剩下的那批：四级 1554 个，六级 2298 个。</p>
+  </section>
+
+  <div class="toolbar">
+    <div class="seg" id="js-level">
+      <button data-level="cet4">四级 4190</button>
+      <button data-level="cet6">六级 3991</button>
+    </div>
+    <div class="seg" id="js-scope">
+      <button data-scope="all">全部</button>
+      <button data-scope="core">核心</button>
+    </div>
+    <div class="seg" id="js-mode">
+      <button data-mode="read">看释义</button>
+      <button data-mode="test">合上自测</button>
+    </div>
+    <span class="spacer"></span>
+    <span class="meta-line" id="js-pos">— / —</span>
+    <button class="btn ghost" id="js-shuffle">随手抽一张</button>
+  </div>
+
+  <div class="study">
+    <div>
+      <article class="wordcard" id="js-card">
+        <div class="idx" id="js-idx">No. 0001</div>
+        <span class="lv" id="js-lv">四级</span>
+        <div class="word" id="js-word">loading</div>
+        <div class="phon" id="js-phon"></div>
+        <div class="mean" id="js-mean"></div>
+        <div class="detail" id="js-detail"></div>
+        <div class="hidden-veil" id="js-veil" hidden>
+          <b>先想一想它是什么意思</b>
+          <span>点击揭开 · SPACE</span>
+        </div>
+      </article>
+
+      <div class="actions">
+        <button class="btn" id="js-know">认识 · J</button>
+        <button class="btn" id="js-again">不熟 · K</button>
+        <button class="btn ghost" id="js-prev">← 上一个</button>
+        <button class="btn ghost" id="js-next">下一个 →</button>
+        <span class="hint" id="js-hint"></span>
+      </div>
+    </div>
+
+    <aside class="side">
+      <h4>进度</h4>
+      <div class="stat"><span>已认识</span><b id="js-know-n">0</b></div>
+      <div class="stat"><span>待复习</span><b class="red" id="js-again-n">0</b></div>
+      <div class="stat"><span>未开始</span><b id="js-left-n">0</b></div>
+      <div class="bar" style="margin-top:12px"><i id="js-prog"></i></div>
+
+      <h4 style="margin-top:26px">跳字母</h4>
+      <div class="letters" id="js-letters"></div>
+
+      <h4 style="margin-top:26px">错词本</h4>
+      <div class="names" id="js-names"><span style="border:0;padding:0;color:var(--ink-3)">还空着</span></div>
+      <p class="note" style="font-size:12.5px;margin-top:14px">点词跳过去；按「认识」会从错词本里划掉。</p>
+    </aside>
+  </div>
+
+  <footer>
+    <p>
+      词条：<a href="https://github.com/KyleBing/english-vocabulary" target="_blank" rel="noopener">KyleBing/english-vocabulary</a> ·
+      音标补齐：<a href="https://github.com/RealKai42/qwerty-learner" target="_blank" rel="noopener">RealKai42/qwerty-learner</a>
+    </p>
+    <p class="mono">W / 02</p>
+  </footer>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="data/core.js"></script>
+<script src="assets/words.js"></script>
+</body>
+</html>

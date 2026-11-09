@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>读卷 · 四六级自习室</title>
+<meta name="theme-color" content="#F3EEE2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F3EEE2'/%3E%3Crect x='5.5' y='5.5' width='21' height='21' fill='none' stroke='%23A33A2C' stroke-width='2'/%3E%3Cpath d='M11 16h10M16 11v10' stroke='%231E1B16' stroke-width='1.5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  html,body{height:100%;margin:0;overflow:hidden;background:var(--bg);color:var(--ink);font-family:var(--sans)}
+  .v-bar{
+    height:56px;display:flex;align-items:center;gap:var(--s-200);
+    padding:0 var(--s-300);border-bottom:1px solid var(--line);background:var(--bg);
+  }
+  .v-bar .k{font-family:var(--mono);font-size:11px;letter-spacing:.14em;color:var(--ink3);white-space:nowrap}
+  .v-bar .t{font-size:var(--t-sm);line-height:var(--l-sm);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .v-bar .spacer{flex:1}
+  .v-bar a{font-size:var(--t-sm);line-height:var(--l-sm);color:var(--ink2);border-bottom:1px solid transparent;white-space:nowrap}
+  .v-bar a:hover{color:var(--lime);border-color:rgba(201,242,77,.5)}
+  .v-main{height:calc(100% - 56px);position:relative;background:#fff}
+  iframe{border:0;width:100%;height:100%;display:block}
+  .v-hint{font-family:var(--kai);font-size:var(--t-xs);color:var(--ink3);letter-spacing:.02em}
+  @media (max-width:760px){.v-hint{display:none}}
+  @media (max-width:560px){
+    .v-bar{padding:0 var(--s-200);gap:var(--s-100)}
+    .v-bar .t{font-size:var(--t-xs)}
+  }
+</style>
+</head>
+<body>
+<header class="v-bar">
+  <span class="k" id="js-k">PAPER</span>
+  <span class="t" id="js-t">读卷</span>
+  <span class="v-hint" id="js-note">加载中…</span>
+  <span class="spacer"></span>
+  <a href="papers.html">← 真题库</a>
+  <a id="js-open" href="#" target="_blank" rel="noopener">新窗口打开</a>
+</header>
+<main class="v-main" id="js-mount"></main>
+
+<script>
+(function () {
+  var q = new URLSearchParams(location.search);
+  var f = q.get('f') || '';
+  var t = q.get('t') || '读卷';
+  var k = q.get('k') || '';
+  document.title = t + ' · 四六级自习室';
+  document.getElementById('js-t').textContent = t;
+  document.getElementById('js-k').textContent = k || 'PAPER';
+  document.getElementById('js-open').href = f;
+
+  var mount = document.getElementById('js-mount');
+  var note = document.getElementById('js-note');
+  if (!f) {
+    note.textContent = '没带文件参数。回真题库点一份标「本」的文件。';
+    return;
+  }
+  var fr = document.createElement('iframe');
+  fr.src = f;
+  fr.title = t;
+  mount.appendChild(fr);
+  var isPdf = /\.pdf$/i.test(f);
+  note.textContent = isPdf
+    ? 'PDF 打不开就点「新窗口打开」'
+    : '本地参考答案';
+})();
+</script>
+</body>
+</html>

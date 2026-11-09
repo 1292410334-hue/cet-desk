@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\lv\Downloads\huml\cet\tools\fetch_audio_pack.py", line 57, in <module>
+    main()
+  File "C:\Users\lv\Downloads\huml\cet\tools\fetch_audio_pack.py", line 45, in main
+    cmd[cmd.index("__SHA__")] = sha
+        ^^^^^^^^^^^^^^^^^^^^
+ValueError: '__SHA__' is not in list

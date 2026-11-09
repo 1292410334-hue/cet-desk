@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>听力 · 四六级自习室</title>
+<meta name="description" content="四六级听力原声：22 段真题音频，倍速、前后 15 秒、循环，记住听到第几秒。">
+<meta name="theme-color" content="#F3EEE2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F3EEE2'/%3E%3Crect x='5.5' y='5.5' width='21' height='21' fill='none' stroke='%23A33A2C' stroke-width='2'/%3E%3Cpath d='M11 16h10M16 11v10' stroke='%231E1B16' stroke-width='1.5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="top wrap">
+  <div class="brand">
+    <b>四六级自习室</b>
+    <span>LISTENING / 听力</span>
+  </div>
+  <nav class="nav">
+    <a href="index.html"><i>01</i>封面</a>
+    <a href="words.html"><i>02</i>单词</a>
+    <a href="papers.html"><i>03</i>真题</a>
+    <a href="exam.html"><i>04</i>模考</a>
+    <a href="listen.html"><i>05</i>听力</a>
+    <a href="quiz.html"><i>06</i>练习</a>
+    <a href="write.html"><i>07</i>作文</a>
+  </nav>
+</header>
+
+<main class="wrap" id="main">
+
+  <section class="page-head has-img" style="background-image:linear-gradient(90deg,rgba(11,12,16,.9),rgba(11,12,16,.55) 60%,rgba(11,12,16,.3)),url(assets/banner-listen.jpg);background-size:cover;background-position:center 42%" data-enter>
+    <p class="caption">LISTENING · 22 段原声</p>
+    <h1 class="h4">听力 · 一段一段地听</h1>
+    <p class="lead-s">倍速、前后 15 秒、循环；关掉再打开会接上次那一秒。标「本地」的离线可放。</p>
+  </section>
+
+  <div class="toolbar">
+    <div class="seg" id="js-level">
+      <button data-level="cet4">四级</button>
+      <button data-level="cet6">六级</button>
+    </div>
+    <div class="seg" id="js-only">
+      <button data-only="all" class="on">全部</button>
+      <button data-only="local">只看本地</button>
+    </div>
+    <div class="seg" id="js-years"></div>
+    <span class="spacer"></span>
+    <span class="meta-line" id="js-count">—</span>
+  </div>
+
+  <div id="js-list" style="padding-bottom:120px"></div>
+
+  <div class="player" id="js-player" hidden>
+    <div class="row">
+      <div class="title" id="js-title">—<small>选一段开始</small></div>
+      <button id="js-back">−15s</button>
+      <button id="js-play" class="on">播放</button>
+      <button id="js-fwd">+15s</button>
+      <button id="js-speed">1.0×</button>
+      <button id="js-loop">循环</button>
+      <span class="time" id="js-time">00:00 / 00:00</span>
+    </div>
+    <div class="seek" id="js-seek"><i id="js-fill"></i><b id="js-knob"></b></div>
+    <p class="hintline" id="js-hint"></p>
+  </div>
+
+  <audio id="js-audio" preload="metadata"></audio>
+
+  <footer>
+    <p>
+      音频来自 <a href="https://github.com/0609x/CET46-Resources" target="_blank" rel="noopener">0609x/CET46-Resources</a>。
+      标「本地」的是已经压缩进本机的文件；其余点击会去 GitHub 取，取不到时跑一次
+      <span class="mono">python tools/build_audio.py --fetch 2025.06</span>（或参考 README）。
+    </p>
+    <p class="mono">L / 04</p>
+  </footer>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="data/audio.js"></script>
+<script src="assets/listen.js"></script>
+</body>
+</html>

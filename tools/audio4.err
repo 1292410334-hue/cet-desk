@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "C:\Users\lv\Downloads\huml\cet\tools\fetch_audio_chunks.py", line 89, in <module>
+    main()
+  File "C:\Users\lv\Downloads\huml\cet\tools\fetch_audio_chunks.py", line 84, in main
+    os.remove(part)
+PermissionError: [WinError 32] 另一个程序正在使用此文件，进程无法访问。: 'C:\\Users\\lv\\Downloads\\huml\\cet\\tools\\.audio_tmp\\cet4_2025_06_0.src'

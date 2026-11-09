@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>作文 · 四六级自习室</title>
+<meta name="description" content="四六级作文批注：词数、段落、连接词、重复词、拼写、句长、标点，规则批改，15 分制。">
+<meta name="theme-color" content="#F3EEE2">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23F3EEE2'/%3E%3Crect x='5.5' y='5.5' width='21' height='21' fill='none' stroke='%23A33A2C' stroke-width='2'/%3E%3Cpath d='M11 16h10M16 11v10' stroke='%231E1B16' stroke-width='1.5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">跳到正文</a>
+
+<header class="top wrap">
+  <div class="brand">
+    <b>四六级自习室</b>
+    <span>WRITING / 作文</span>
+  </div>
+  <nav class="nav">
+    <a href="index.html"><i>01</i>封面</a>
+    <a href="words.html"><i>02</i>单词</a>
+    <a href="papers.html"><i>03</i>真题</a>
+    <a href="exam.html"><i>04</i>模考</a>
+    <a href="listen.html"><i>05</i>听力</a>
+    <a href="quiz.html"><i>06</i>练习</a>
+    <a href="write.html"><i>07</i>作文</a>
+  </nav>
+</header>
+
+<main class="wrap" id="main">
+
+  <section class="page-head has-img" style="background-image:linear-gradient(90deg,rgba(11,12,16,.9),rgba(11,12,16,.55) 60%,rgba(11,12,16,.3)),url(assets/banner-write.jpg);background-size:cover;background-position:center 42%" data-enter>
+    <p class="caption">WRITING · 15 分制</p>
+    <h1 class="h4">作文批注 · 七个维度逐条看</h1>
+    <p class="lead-s">词数、段落、连接词、重复词、拼写、句长、标点。规则批改，不给范文，也不假装是 AI 评语。</p>
+  </section>
+
+  <div class="toolbar">
+    <div class="seg" id="js-level">
+      <button data-level="cet4">四级 · 120+</button>
+      <button data-level="cet6">六级 · 150+</button>
+    </div>
+    <button class="btn" id="js-check">批改</button>
+    <button class="btn ghost" id="js-clear">清空</button>
+    <span class="spacer"></span>
+    <span class="meta-line" id="js-count">0 词 · 0 段</span>
+  </div>
+
+  <div class="essay-wrap">
+    <div>
+      <div class="paper-sheet">
+        <textarea id="js-text" spellcheck="false" placeholder="在这里写。字数不够也没关系，先写完再改。"></textarea>
+        <div class="tools">
+          <span class="count" id="js-tip">题目可以不填</span>
+          <span class="spacer"></span>
+          <input id="js-title" placeholder="作文题目（选填）"
+            style="border:0;border-bottom:1px solid var(--line);background:transparent;font-family:var(--serif);font-size:13px;color:var(--ink);outline:none;padding:3px 4px;width:220px">
+        </div>
+      </div>
+    </div>
+
+    <aside class="marks">
+      <div class="bigscore" id="js-score" hidden><b>—</b><span>分 / 15</span></div>
+      <h4>批注</h4>
+      <div id="js-marks">
+        <p class="note" style="font-size:13px">写完点「批改」。会看：词数、段落、连接词、重复词、拼写、句长、标点。</p>
+      </div>
+    </aside>
+  </div>
+
+  <footer>
+    <p>拼写检查对照的是本站四六级词库 + 常用词表，命名、缩写可能被误标，自己判断。作文不会上传，只在本页处理。</p>
+    <p class="mono">W / 06</p>
+  </footer>
+</main>
+
+<script src="assets/app.js"></script>
+<script src="assets/write.js"></script>
+</body>
+</html>
