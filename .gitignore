@@ -1,0 +1,4 @@
+tools/.audio_tmp/
+*.log
+*.err
+__pycache__/
